@@ -1,5 +1,6 @@
 #include "DoubleLinkedList.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 DLL DLL_InitList(){
     DLL list = (DLL)malloc(sizeof(DoubleNode));
@@ -101,6 +102,9 @@ int DLL_Delete(DLL list, int i, DataType *x){
         *x = q->data;
     }
     p->next = q->next;
+    if(q->next){
+        q->next->prev = p;
+    }
     free(q);
     return 0;
 }

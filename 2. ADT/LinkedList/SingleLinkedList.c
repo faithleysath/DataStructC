@@ -1,5 +1,6 @@
 #include "SingleLinkedList.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 SLL SLL_InitList(){
     SLL list = (SLL)malloc(sizeof(SingleNode));
